@@ -7,9 +7,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Gramentheme">
-        <meta name="description" content="Exolax - Creative Agency Html Template">
+        <meta name="description" content="Transform your online presence with Labyrinth Web Design. Expert web design, custom development, and digital marketing services to grow your business.">
         <!-- ======== Page title ============ -->
-        <title>Exolax - Creative Agency Html Template</title>
+        <title>Labyrinth - Web development studio</title>
         <!--<< Favcion >>-->
         <link rel="shortcut icon" href="assets/img/favicon.svg">
         <!--<< Bootstrap min.css >>-->
@@ -329,7 +329,8 @@
                       <div class="col-lg-6">
     <div class="contact-content">
         <h3 class="wow fadeInUp">Ready to Get Started?</h3>
-        <form action="contact.php" id="contact-form" method="POST" class="contact-form-items">
+        <form action="https://formspree.io/f/mgvapbky"
+        method="POST" id="contact-form" method="POST" class="contact-form-items">
             <div class="row g-4">
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay=".3s">
                     <div class="form-clt">
@@ -442,6 +443,8 @@
 
         <!--<< All JS Plugins >>-->
         <!-- Add JavaScript for AJAX submission -->
+
+        <!-- Add JavaScript for AJAX submission (optional) -->
 <script>
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent default form submission
@@ -452,19 +455,37 @@
         fetch(form.action, {
             method: 'POST',
             body: new FormData(form),
+            headers: {
+                'Accept': 'application/json'
+            }
         })
-        .then(response => response.text())
+        .then(response => response.json())
         .then(data => {
-            responseDiv.textContent = data;
-            if (responseDiv.textContent.includes("Thank You")) {
+            if (data.ok) {
+                responseDiv.textContent = 'Thank You! Your message has been sent.';
                 form.reset(); // Clear the form on success
+            } else {
+                responseDiv.textContent = 'Oops! Something went wrong, please try again.';
+                responseDiv.classList.add('error');
             }
         })
         .catch(error => {
-            responseDiv.textContent = "An error occurred. Please try again later.";
+            responseDiv.textContent = 'An error occurred. Please try again later.';
+            responseDiv.classList.add('error');
         });
     });
 </script>
+
+<style>
+    .response {
+        margin-top: 15px;
+        font-weight: bold;
+        color: #28a745; /* Green for success */
+    }
+    .response.error {
+        color: #dc3545; /* Red for error */
+    }
+</style>
         <script src="assets/js/jquery-3.7.1.min.js"></script>
         <!--<< Viewport Js >>-->
         <script src="assets/js/viewport.jquery.js"></script>
