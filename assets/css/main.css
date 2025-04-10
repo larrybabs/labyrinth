@@ -318,8 +318,8 @@ span {
   color: var(--white);
 }
 .about-wrapper .about-content ul .about-list .content p {
-  font-weight: 600;
-  color: #888888;
+  font-weight: 400;
+  color: #fff;
   text-transform: capitalize;
 }
 .about-wrapper .about-image-items {
@@ -4007,7 +4007,7 @@ span {
 .hero-1 .icon-text p {
   text-transform: uppercase;
   font-weight: 500;
-  color: #888;
+  color: #fff;
   font-size: 20px;
   font-family: "Teko", sans-serif;
 }
@@ -4025,7 +4025,7 @@ span {
 }
 .hero-1 .hero-list li {
   font-size: 16px;
-  color: var(--text2);
+  color: #fff;
   font-weight: 400;
   text-transform: uppercase;
   position: relative;
@@ -4039,19 +4039,19 @@ span {
   width: 8px;
   height: 8px;
   border-radius: 8px;
-  background-color: var(--text2);
+  background-color: #fff;
 }
 .hero-1 .hero-list li:not(:last-child) {
   margin-bottom: 10px;
 }
 .hero-1 .client-info h4 {
-  color: var(--white);
+  color: #fff;
   font-size: 24px;
   font-weight: 400;
   text-transform: uppercase;
 }
 .hero-1 .client-info h4 span {
-  color: var(--text2);
+  color: #fff;
 }
 .hero-1 .client-info {
   border-radius: 276.5px;
